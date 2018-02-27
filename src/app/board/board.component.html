@@ -1,0 +1,11 @@
+<p>
+  board works!
+</p>
+
+<div class="rows" *ngFor="let b of board">
+  <div class="cell" [style.background-color]="c==0 ? 'white':'rgb(' + c*100 + ',' + c*100 + ',0)'" *ngFor="let c of b">
+    {{ c }}
+  </div>
+</div>
+
+<button (click)="placeRandom()">Random</button>
